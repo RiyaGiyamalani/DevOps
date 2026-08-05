@@ -1,0 +1,14 @@
+[
+    {
+        "name": "Riya Giyamalani",
+        "email": "rg@gmail.com",
+        "age": 21,
+        "course": "CSE"
+    },
+    {
+        "name": "Priya Sharma",
+        "email": "priya@example.com",
+        "age": 25,
+        "course": "IT"
+    }
+]
