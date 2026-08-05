@@ -25,7 +25,7 @@ if (fs.existsSync("students.json")) {
 
     let passed = true;
 
-    if (students.name.trim() !== "") {
+    if (students[0].name.trim() !== "") {
         console.log("TC : Name Validation : PASS");
     } else {
         console.log("TC : Name Validation : FAIL");
