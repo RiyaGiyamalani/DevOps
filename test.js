@@ -33,30 +33,30 @@ if (fs.existsSync("students.json")) {
 const students = JSON.parse(fs.readFileSync("students.json", "utf8"));
 
 if (students[0].name.trim() != "") {
-    console.log("TC:01 : Name Validation : PASS");
+    console.log("Name Validation : PASS");
 } else {
-    console.log("TC:01 : Name Validation : FAIL");
+    console.log(" Name Validation : FAIL");
     passed = false;
 }
 
 if (students[0].email.trim() != "") {
-    console.log("TC:02 : Email Validation : PASS");
+    console.log("Email Validation : PASS");
 } else {
-    console.log("TC:02 : Email Validation : FAIL");
+    console.log("Email Validation : FAIL");
     passed = false;
 }
 
 if (students[0].age > 0) {
-    console.log("TC:03 : Age Validation : PASS");
+    console.log("Age Validation : PASS");
 } else {
-    console.log("TC:03 : Age Validation : FAIL");
+    console.log("Age Validation : FAIL");
     passed = false;
 }
 
 if (students[0].course.trim() != "") {
-    console.log("TC:04 : Course Validation : PASS");
+    console.log("Course Validation : PASS");
 } else {
-    console.log("TC:04 : Course Validation : FAIL");
+    console.log("Course Validation : FAIL");
     passed = false;
 }
 
