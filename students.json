@@ -1,14 +1,8 @@
 [
     {
         "name": "Riya Giyamalani",
-        "email": "rg@gmail.com",
-        "age": 16,
+        "email": "giyamalaniriyaa@gmail.com",
+        "age": 18,
         "course": "CSE"
-    },
-    {
-        "name": "Priya Sharma",
-        "email": "priya@example.com",
-        "age": 25,
-        "course": "IT"
     }
 ]

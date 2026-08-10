@@ -23,6 +23,13 @@ if (fs.existsSync("script.js")) {
     passed = false;
 }
 
+if (fs.existsSync("server.js")) {
+    console.log("server.js exists");
+} else {
+    console.log("server.js not found");
+    passed = false;
+}
+
 if (fs.existsSync("students.json")) {
     console.log("students.json exists");
 } else {
@@ -32,31 +39,38 @@ if (fs.existsSync("students.json")) {
 
 const students = JSON.parse(fs.readFileSync("students.json", "utf8"));
 
-if (students[0].name.trim() != "") {
-    console.log("Name Validation : PASS");
-} else {
-    console.log(" Name Validation : FAIL");
-    passed = false;
-}
+if (students.length > 0) {
 
-if (students[0].email.trim() != "") {
-    console.log("Email Validation : PASS");
-} else {
-    console.log("Email Validation : FAIL");
-    passed = false;
-}
+    if (students[0].name.trim() != "") {
+        console.log("Name Validation : PASS");
+    } else {
+        console.log("Name Validation : FAIL");
+        passed = false;
+    }
 
-if (students[0].age > 0) {
-    console.log("Age Validation : PASS");
-} else {
-    console.log("Age Validation : FAIL");
-    passed = false;
-}
+    if (students[0].email.trim() != "") {
+        console.log("Email Validation : PASS");
+    } else {
+        console.log("Email Validation : FAIL");
+        passed = false;
+    }
 
-if (students[0].course.trim() != "") {
-    console.log("Course Validation : PASS");
+    if (students[0].age > 0) {
+        console.log("Age Validation : PASS");
+    } else {
+        console.log("Age Validation : FAIL");
+        passed = false;
+    }
+
+    if (students[0].course.trim() != "") {
+        console.log("Course Validation : PASS");
+    } else {
+        console.log("Course Validation : FAIL");
+        passed = false;
+    }
+
 } else {
-    console.log("Course Validation : FAIL");
+    console.log("No students registered");
     passed = false;
 }
 
