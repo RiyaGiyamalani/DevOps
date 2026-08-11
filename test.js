@@ -41,33 +41,37 @@ const students = JSON.parse(fs.readFileSync("students.json", "utf8"));
 
 if (students.length > 0) {
 
-    if (students[0].name.trim() != "") {
-        console.log("Name Validation : PASS");
-    } else {
-        console.log("Name Validation : FAIL");
-        passed = false;
-    }
+    students.forEach((student, index) => {
+        console.log(`\nStudent ${index + 1}:`);
 
-    if (students[0].email.trim() != "") {
-        console.log("Email Validation : PASS");
-    } else {
-        console.log("Email Validation : FAIL");
-        passed = false;
-    }
+        if (student.name && student.name.trim() != "") {
+            console.log("Name Validation : PASS");
+        } else {
+            console.log("Name Validation : FAIL");
+            passed = false;
+        }
 
-    if (students[0].age > 0) {
-        console.log("Age Validation : PASS");
-    } else {
-        console.log("Age Validation : FAIL");
-        passed = false;
-    }
+        if (student.email && student.email.trim() != "") {
+            console.log("Email Validation : PASS");
+        } else {
+            console.log("Email Validation : FAIL");
+            passed = false;
+        }
 
-    if (students[0].course.trim() != "") {
-        console.log("Course Validation : PASS");
-    } else {
-        console.log("Course Validation : FAIL");
-        passed = false;
-    }
+        if (student.age > 0) {
+            console.log("Age Validation : PASS");
+        } else {
+            console.log("Age Validation : FAIL");
+            passed = false;
+        }
+
+        if (student.course && student.course.trim() != "") {
+            console.log("Course Validation : PASS");
+        } else {
+            console.log("Course Validation : FAIL");
+            passed = false;
+        }
+    });
 
 } else {
     console.log("No students registered");
@@ -75,8 +79,8 @@ if (students.length > 0) {
 }
 
 if (passed) {
-    console.log("All Test Cases Passed");
+    console.log("\nAll Test Cases Passed");
 } else {
-    console.log("Some Test Cases Failed");
+    console.log("\nSome Test Cases Failed");
     process.exit(1);
 }
