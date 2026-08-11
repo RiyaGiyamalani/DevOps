@@ -40,7 +40,6 @@ if (fs.existsSync("students.json")) {
 const students = JSON.parse(fs.readFileSync("students.json", "utf8"));
 
 if (students.length > 0) {
-
     students.forEach((student, index) => {
         console.log(`\nStudent ${index + 1}:`);
 
@@ -58,7 +57,7 @@ if (students.length > 0) {
             passed = false;
         }
 
-        if (student.age > 0) {
+        if (student.age >= 18) {
             console.log("Age Validation : PASS");
         } else {
             console.log("Age Validation : FAIL");
@@ -72,7 +71,6 @@ if (students.length > 0) {
             passed = false;
         }
     });
-
 } else {
     console.log("No students registered");
     passed = false;

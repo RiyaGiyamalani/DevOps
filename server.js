@@ -27,6 +27,6 @@ app.post("/register", (req, res) => {
     res.json({ message: "Student registered" });
 });
 
-app.listen(3000, () => {
-    console.log("Server running on port 3000");
+app.listen(3001, "0.0.0.0", () => {
+    console.log("Server running on port 3001");
 });
