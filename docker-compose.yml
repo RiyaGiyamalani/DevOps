@@ -4,3 +4,6 @@ services:
     ports:
       - "3001:3001"
     restart: unless-stopped
+    volumes:
+      - ./students.json:/app/students.json
+      - ./users.json:/app/users.json
